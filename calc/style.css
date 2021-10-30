@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Century Gothic", "Verdana";
+}
+
+body {
+  background-color: rgba(51, 51, 172, 0.644);
+  background-image: linear-gradient(rgba(19, 15, 15, 0.671));
+}
+
+span {
+  float: right;
+}
+
+main {
+  display: grid;
+  margin: 3rem auto;
+  width: 25rem;
+  height: 40rem;
+  background-color: white;
+  border-radius: 5vh;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+#result {
+  position: relative;
+}
+
+#result div {
+  position: absolute;
+}
+
+.history {
+  right: 40px;
+  bottom: 120px;
+  font-size: 25px;
+  color: rgb(151, 151, 151);
+}
+
+.symbol {
+  right: 40px;
+  bottom: 75px;
+  font-size: 22px;
+  color: rgb(151, 151, 151);
+}
+
+.display {
+  right: 40px;
+  bottom: 20px;
+  font-size: 35px;
+}
+
+#keys {
+  display: grid;
+  margin: 0 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: solid 2px;
+}
+
+.key {
+  border: none;
+  border-radius: 20rem;
+  margin: 3px 10px;
+  outline: none;
+  font-size: 16px;
+}
+
+.equal {
+  background-color: rgba(255, 106, 47, 0.596);
+}
