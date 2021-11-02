@@ -1,3 +1,4 @@
+// Assigning button from html
 const display = document.querySelector(".display");
 const symbol = document.querySelector(".symbol");
 const history = document.querySelector(".history");
@@ -22,6 +23,7 @@ const ix = document.querySelector(".ix");
 const deci = document.querySelector(".deci");
 const X = document.querySelector(".X");
 
+// Adding event listeners to buttons
 zero.addEventListener("click", addnum);
 i.addEventListener("click", addnum);
 ii.addEventListener("click", addnum);
@@ -43,9 +45,13 @@ multi.addEventListener("click", calc);
 divide.addEventListener("click", calc);
 equal.addEventListener("click", calc);
 
+// To check if it is the first number
 var check = true;
+
+// To store the symbol (or) Operator
 var sym;
 
+// To update number/Entering numbers in the calculator
 function addnum(event) {
   const elm = event.target.innerText;
   if (display.innerText.indexOf(".") > -1 && elm == ".") return;
@@ -54,6 +60,7 @@ function addnum(event) {
   display.innerText += elm;
 }
 
+// TO calculate and excecute the operation
 function calc(event) {
   var result = parseFloat(history.innerText);
   const num = parseFloat(display.innerText);
@@ -89,18 +96,22 @@ function calc(event) {
   display.innerText = "0";
 }
 
+// Delete the last entered number
 function del() {
   const elm = display.innerText;
   var str = elm.substring(0, elm.length - 1);
   display.innerText = str;
 }
 
+// Clear the calculator data
 function clear() {
   check = true;
   display.innerText = "0";
   history.innerText = "";
   symbol.innerText = "";
 }
+
+/* The following code is for improving the code in the future [Work in progress] */
 
 // const nums = [];
 // var sym;
